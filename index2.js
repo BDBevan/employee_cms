@@ -61,13 +61,13 @@ async function viewRoles() {
 
 async function viewEmployees() {
     const result = await db.query(`
-        SELECT employees.id, first_name, last_name, roles.title AS role,
-               departments.name AS department, roles.salary, 
+        SELECT e.id, e.first_name, e.last_name, r.title AS role,
+               d.name AS department, r.salary, 
                CONCAT(m.first_name, ' ', m.last_name) AS manager
-        FROM employees
-        LEFT JOIN roles ON employees.role_id = roles.id
-        LEFT JOIN departments ON roles.department_id = departments.id
-        LEFT JOIN employees m ON employees.manager_id = m.id
+        FROM employees e
+        LEFT JOIN roles r ON e.role_id = r.id
+        LEFT JOIN departments d ON r.department_id = d.id
+        LEFT JOIN employees m ON e.manager_id = m.id
     `);
     console.table(result.rows);
     main();
@@ -192,8 +192,6 @@ async function updateEmployeeRole() {
     await db.query('UPDATE employees SET role_id = $1 WHERE id = $2', [roleId, employeeId]);
     console.log('Employee role updated.');
     main();
-
-    
 }
 
 main();
