@@ -1,2 +1,7 @@
-# employee_cms
-# Basic build
+## Employee CMS DB Application
+
+# Description
+
+
+
+# Screen Shots and Video
