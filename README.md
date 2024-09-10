@@ -24,4 +24,4 @@ Screen grabs :
 
 Link the screencastify walkthrough video : 
 
-[https://app.screencastify.com/v2/manage/videos/9sD5Zcu3Tzu6BFW4IFJS](https://drive.google.com/file/d/1U_XArhrEaQaQTM_T-mhH913VcdPBWk_C/view)
+https://drive.google.com/file/d/1U_XArhrEaQaQTM_T-mhH913VcdPBWk_C/view
